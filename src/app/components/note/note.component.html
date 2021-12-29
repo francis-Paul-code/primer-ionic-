@@ -1,0 +1,13 @@
+<ion-card class="_card">
+  <ion-card-header class="_header">
+    <ion-card-title>{{ title }}</ion-card-title>
+    <ion-card-subtitle>{{ formattedString }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content class="_content">
+    <span>{{
+      body.split(" ").length > 60
+        ? body.split(" ").splice(0, 60).join(" ")
+        : body
+    }}</span>
+  </ion-card-content>
+</ion-card>

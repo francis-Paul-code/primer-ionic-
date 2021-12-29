@@ -1,0 +1,13 @@
+<div class="_container">
+  <ul class="_content">
+    <li *ngFor="let task of tasks">
+      <app-task
+        id="{{task.id}}"
+        title="{{task.title}}"
+        date="{{task.date}}"
+        body="{{task.body}}"
+        priority="{{task.priority}}"
+      ></app-task>
+    </li>
+  </ul>
+</div>

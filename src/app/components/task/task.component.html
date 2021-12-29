@@ -1,0 +1,89 @@
+<div class="_container">
+  <ion-card class="card">
+    <ion-card-content>
+      <div
+        class="badge"
+        [style.height]="editStatus === false ? '7vh' : '32vh'"
+        [style.background]="color"
+      ></div>
+      <section class="_content">
+        <section class="topBar">
+          <div class="title">
+            <span *ngIf="editing === false">{{
+              title.length > 50 ? title.split("").splice(0, 50).join("") : title
+            }}</span>
+            <textarea *ngIf="editing === true" id="titleInput">{{
+              title
+            }}</textarea>
+          </div>
+          <div class="date">
+            <span>{{ formattedString }}</span>
+          </div>
+          <div class="btnDrop">
+            <div class="ion-activatable" (click)="toggleCard()">
+              <ion-icon
+                name="caret-down-outline"
+                color="primary"
+                *ngIf="editStatus === false"
+              ></ion-icon>
+              <ion-icon
+                name="caret-up-outline"
+                color="primary"
+                *ngIf="editStatus === true"
+              ></ion-icon>
+              <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+            </div>
+          </div>
+        </section>
+        <section class="dropdown" *ngIf="editStatus === true">
+          <div class="body">
+            <span *ngIf="editing === false">{{ body }}</span>
+            <textarea *ngIf="editing === true" id="bodyInput">{{
+              body
+            }}</textarea>
+          </div>
+          <div class="actions">
+            <section class="Input">
+              <div class="dateInput">
+                <ion-datetime
+                  presentation="time-date"
+                  id="dateInput"
+                  placeholder="{{ formattedString}}"
+                ></ion-datetime>
+              </div>
+              <div class="priority">
+                <ion-item>
+                  <ion-label position="floating">Priority</ion-label>
+                  <ion-select value="{{ priority }}" id="priority">
+                    <ion-select-option value="none">None</ion-select-option>
+                    <ion-select-option value="urgent">Urgent</ion-select-option>
+                    <ion-select-option value="high">High</ion-select-option>
+                    <ion-select-option value="medium">Medium</ion-select-option>
+                    <ion-select-option value="low">Low</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </div>
+            </section>
+            <section class="btnGrp">
+              <ion-button
+                color="danger"
+                *ngIf="editing === false"
+                (click)="delete()"
+                >Delete</ion-button
+              >
+              <ion-button color="primary" (click)="edit()" class="update">{{
+                editing === true ? "Cancel" : "Update"
+              }}</ion-button>
+              <ion-button
+                color="success"
+                *ngIf="editing === true"
+                (click)="updateData()"
+                >Save</ion-button
+              >
+            </section>
+          </div>
+        </section>
+      </section>
+    </ion-card-content>
+  </ion-card>
+</div>

@@ -1,0 +1,20 @@
+<div class="_container">
+  <section class="_content">
+    <ion-segment (ionChange)="segmentChange($event)" value="tasks">
+      <ion-segment-button value="tasks">
+        <ion-label>Add Task</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="notes">
+        <ion-label>Add Notes</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <section class="holder">
+      <div class="notes" *ngIf='notes === true'>
+        <app-add-note></app-add-note>
+      </div>
+      <div class="tasks" *ngIf="task === true">
+        <app-add-task></app-add-task>
+      </div>
+    </section>
+  </section>
+</div>

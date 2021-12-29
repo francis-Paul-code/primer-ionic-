@@ -1,0 +1,49 @@
+<div class="_content">
+  <section class="_container">
+    <div class="tasks">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Tasks</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ul>
+            <li *ngFor="let task of tasks">
+              <app-task
+                id="{{task.id}}"
+                title="{{task.title}}"
+                date="{{task.date}}"
+                body="{{task.body}}"
+                priority="{{task.priority}}"
+              ></app-task>
+            </li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="notes">
+      <ion-card>
+        <ion-card-header>
+            <ion-card-title>Notes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ul>
+            <li class="ion-activatable _note" *ngFor="let item of note">
+              <a
+                routerLink="{{item.id}}"
+                style="cursor: pointer; text-decoration: none"
+              >
+                <app-note
+                  id="{{item.id}}"
+                  title="{{item.title}}"
+                  date="{{item.date}}"
+                  body="{{item.body}}"
+                ></app-note>
+              </a>
+              <ion-ripple-effect></ion-ripple-effect>
+            </li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </section>
+</div>

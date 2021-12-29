@@ -1,0 +1,69 @@
+<div class="main-container">
+  <ion-card class="_container">
+    <ion-card-header class="header">
+      <ion-card-title>
+        <span> {{note.title}} </span>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="_content">
+      <section class="text">
+        <ion-item class="title">
+          <ion-label style="color: #0f324d; font-size: 1em" position="stacked"
+            >Title</ion-label
+          >
+          <br />
+          <span *ngIf="status === false">{{note.title}}</span>
+          <textarea
+            *ngIf="status === true"
+            value="{{note.title}}"
+            id="titleInput"
+          ></textarea>
+        </ion-item>
+        <ion-item class="date">
+          <ion-label style="color: #0f324d; font-size: 1em" position="stacked"
+            >Date</ion-label
+          >
+          <br />
+          <span *ngIf="status === false">{{formattedString}}</span>
+          <ion-datetime
+            *ngIf="status === true"
+            presentation="time-date"
+            id="dateInput"
+            value={{formattedString}}
+          ></ion-datetime>
+        </ion-item>
+        <ion-item class="body">
+          <ion-label style="color: #0f324d; font-size: 1em" position="stacked"
+            >Body</ion-label
+          >
+          <br />
+          <span *ngIf="status === false">{{note.body}}</span>
+          <textarea
+            *ngIf="status === true"
+            id="bodyInput"
+            value="{{note.body}}"
+          ></textarea>
+        </ion-item>
+      </section>
+      <section class="footer">
+        <span>
+          <ion-button
+            color="danger"
+            (click)="delete()"
+            style="position: relative; right: 5%"
+            >Delete</ion-button
+          >
+          <ion-button color="primary" *ngIf="status === true" (click)="update()"
+            >Save</ion-button
+          >
+          <ion-button
+            color="primary"
+            (click)="toggleStatus()"
+            *ngIf="status === false"
+            >Update</ion-button
+          >
+        </span>
+      </section>
+    </ion-card-content>
+  </ion-card>
+</div>

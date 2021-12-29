@@ -1,0 +1,18 @@
+<div class="main-container">
+  <ul class="_content">
+    <li class=" ion-activatable _note" *ngFor='let item of note'>
+      <a
+        routerLink="{{item.id}}"
+        style="cursor: pointer; text-decoration: none"
+      >
+        <app-note
+        id='{{item.id}}'
+        title='{{item.title}}'
+        date="{{item.date}}"
+        body="{{item.body}}"
+        ></app-note>
+      </a>
+      <ion-ripple-effect></ion-ripple-effect>
+    </li>
+  </ul>
+</div>
