@@ -14,6 +14,7 @@ export class NotesPage implements OnInit {
   ngOnInit() {
     this.getAll();
   }
+
  getAll() {
     this.notesService.getNote().subscribe((item) => {
       this.note = item.notes;

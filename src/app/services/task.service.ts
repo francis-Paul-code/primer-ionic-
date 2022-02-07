@@ -13,7 +13,7 @@ const options = {
   providedIn: 'root',
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:8080/primer/tasks/';
+  private apiUrl = 'http://192.168.43.190:8080/primer/tasks/';
   constructor(private http: HttpClient) {}
   getTask(): Observable<any> {
     return this.http.get<any>(this.apiUrl);

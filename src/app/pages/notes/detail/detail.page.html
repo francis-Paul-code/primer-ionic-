@@ -7,44 +7,50 @@
     </ion-card-header>
     <ion-card-content class="_content">
       <section class="text">
-        <ion-item class="title">
+        <div class="title">
           <ion-label style="color: #0f324d; font-size: 1em" position="stacked"
             >Title</ion-label
           >
-          <br />
-          <span *ngIf="status === false">{{note.title}}</span>
-          <textarea
-            *ngIf="status === true"
-            value="{{note.title}}"
-            id="titleInput"
-          ></textarea>
-        </ion-item>
-        <ion-item class="date">
+          <div>
+            <span *ngIf="status === false">{{note.title}}</span>
+            <textarea
+              *ngIf="status === true"
+              value="{{note.title}}"
+              id="titleInput"
+            ></textarea>
+          </div>
+        </div>
+        <div class="date">
           <ion-label style="color: #0f324d; font-size: 1em" position="stacked"
             >Date</ion-label
           >
           <br />
-          <span *ngIf="status === false">{{formattedString}}</span>
-          <ion-datetime
-            *ngIf="status === true"
-            presentation="time-date"
-            id="dateInput"
-            value={{formattedString}}
-          ></ion-datetime>
-        </ion-item>
-        <ion-item class="body">
+          <div>
+            <span *ngIf="status === false">{{formattedString}}</span>
+            <ion-datetime
+              *ngIf="status === true"
+              presentation="time-date"
+              id="dateInput"
+              value="{{formattedString}}"
+            ></ion-datetime>
+          </div>
+        </div>
+        <div class="body">
           <ion-label style="color: #0f324d; font-size: 1em" position="stacked"
             >Body</ion-label
           >
           <br />
-          <span *ngIf="status === false">{{note.body}}</span>
-          <textarea
-            *ngIf="status === true"
-            id="bodyInput"
-            value="{{note.body}}"
-          ></textarea>
-        </ion-item>
+          <div>
+            <span *ngIf="status === false">{{note.body}}</span>
+            <textarea
+              *ngIf="status === true"
+              id="bodyInput"
+              value="{{note.body}}"
+            ></textarea>
+          </div>
+        </div>
       </section>
+
       <section class="footer">
         <span>
           <ion-button

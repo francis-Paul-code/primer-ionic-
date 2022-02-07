@@ -13,11 +13,11 @@ const options = {
   providedIn: 'root',
 })
 export class NotesService {
-  private apiUrl = 'http://localhost:8080/primer/notes/';
+  private apiUrl = 'http://192.168.43.190:8080/primer/notes/';
 
   constructor(private http: HttpClient) {}
 
- getNote(): Observable<any> {
+  getNote(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
 
