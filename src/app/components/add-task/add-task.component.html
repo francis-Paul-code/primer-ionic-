@@ -1,47 +1,56 @@
 <div class="_container">
   <section class="_content">
-    <ion-title position="center">New Task</ion-title>
+    <ion-title position="floating">New Task</ion-title>
     <br />
-    <ion-card class="title">
-      <ion-card-content>
-        <ion-label position="floating">Title</ion-label>
-        <ion-input id="titleInput" placeholder="Enter Title" maxlength="50" required></ion-input>
-      </ion-card-content>
-    </ion-card>
-    <br />
-    <ion-card class="mixed">
-      <ion-card-content>
-        <div class="date">
-          <ion-datetime
-            presentation="time-date"
-            id="dateInput"
-            placeholder="Enter Date"
-          ></ion-datetime>
-        </div>
-        <div class="priority">
-          <ion-item>
-            <ion-label position="floating">Priority</ion-label>
-            <ion-select value="none" id="priority" required>
-              <ion-select-option value="none">None</ion-select-option>
-              <ion-select-option value="urgent">Urgent</ion-select-option>
-              <ion-select-option value="high">High</ion-select-option>
-              <ion-select-option value="medium">Medium</ion-select-option>
-              <ion-select-option value="low">Low</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </div>
-      </ion-card-content>
-    </ion-card>
-    <br />
-    <ion-card class="body">
-      <ion-card-content>
-        <ion-label position="floating">Body</ion-label>
-        <textarea id="bodyInput"></textarea>
-      </ion-card-content>
-    </ion-card>
-    <br/>
-    <div class="btns">
-      <ion-button color="primary" (click)='save()'>Save</ion-button>
+    <div id="carrier">
+      <ion-card class="title">
+        <ion-card-content>
+          <!-- <ion-label position="floating">Title</ion-label> -->
+          <ion-input
+            id="titleInput"
+            placeholder="Enter Title"
+            maxlength="50"
+            required
+          ></ion-input>
+        </ion-card-content>
+      </ion-card>
+      <br />
+      <ion-card class="mixed">
+        <ion-card-content>
+          <div class="date">
+            <ion-datetime
+              presentation="time-date"
+              id="dateInput"
+              placeholder="Enter Date"
+            ></ion-datetime>
+          </div>
+          <div class="priority">
+            <ion-item>
+              <ion-label position="floating">Priority</ion-label>
+              <ion-select value="none" id="priority" required>
+                <ion-select-option value="none">None</ion-select-option>
+                <ion-select-option value="urgent">Urgent</ion-select-option>
+                <ion-select-option value="high">High</ion-select-option>
+                <ion-select-option value="medium">Medium</ion-select-option>
+                <ion-select-option value="low">Low</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <br />
+      <div class="body">
+        <ion-card >
+        <ion-card-content>
+          <ion-label position="floating">Body</ion-label>
+          <textarea id="bodyInput"></textarea>
+        </ion-card-content>
+      </ion-card>
+      </div>
+      <br />
+      <div class="btns">
+        <ion-button color="primary" (click)="save()">Save</ion-button>
+      </div>
     </div>
   </section>
 </div>

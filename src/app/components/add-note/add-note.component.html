@@ -2,34 +2,41 @@
   <section class="_content">
     <ion-title position="center">New Note</ion-title>
     <br />
-    <ion-card class="title">
-      <ion-card-content>
-        <ion-label position="floating">Title</ion-label>
-        <ion-input id="titleInput" placeholder="Enter Title" maxlength="50" required></ion-input>
-      </ion-card-content>
-    </ion-card>
-    <br />
-    <ion-card class="mixed">
-      <ion-card-content>
-        <div class="date">
-          <ion-datetime
-            presentation="time-date"
-            id="dateInput"
-            placeholder="Enter Date"
-          ></ion-datetime>
-        </div>
-      </ion-card-content>
-    </ion-card>
-    <br />
-    <ion-card class="body">
-      <ion-card-content>
-        <ion-label position="floating">Body</ion-label>
-        <textarea id="bodyInput"></textarea>
-      </ion-card-content>
-    </ion-card>
-    <br/>
-    <div class="btns">
-      <ion-button color="primary" (click)='save()'>Save</ion-button>
+    <div class="carrier">
+      <ion-card class="title">
+        <ion-card-content>
+          <!-- <ion-label position="floating">Title</ion-label> -->
+          <ion-input
+            id="titleInput"
+            placeholder="Enter Title"
+            maxlength="50"
+            required
+          ></ion-input>
+        </ion-card-content>
+      </ion-card>
+      <br />
+      <ion-card class="mixed">
+        <ion-card-content>
+          <div class="date">
+            <ion-datetime
+              presentation="time-date"
+              id="dateInput"
+              placeholder="Enter Date"
+            ></ion-datetime>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <br />
+      <ion-card class="body">
+        <ion-card-content>
+          <ion-label position="floating">Body</ion-label>
+          <textarea id="bodyInput"></textarea>
+        </ion-card-content>
+      </ion-card>
+      <br />
+      <div class="btns">
+        <ion-button color="primary" (click)="save()">Save</ion-button>
+      </div>
     </div>
   </section>
 </div>

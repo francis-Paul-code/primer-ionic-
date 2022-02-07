@@ -1,12 +1,27 @@
 <div class="_content">
   <section class="_container">
-    <div class="tasks">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Tasks</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ul>
+     <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="notes">
+            <ion-label>Notes</ion-label>
+            <ion-icon name="document"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button tab="tasks">
+            <ion-label>Tasks</ion-label>
+            <ion-icon name="reader"></ion-icon>
+          </ion-tab-button>
+        </ion-tab-bar>
+     </ion-tabs>
+  </section>
+</div>
+
+
+
+
+
+
+
+<!-- <ul>
             <li *ngFor="let task of tasks">
               <app-task
                 id="{{task.id}}"
@@ -16,17 +31,12 @@
                 priority="{{task.priority}}"
               ></app-task>
             </li>
-          </ul>
-        </ion-card-content>
-      </ion-card>
-    </div>
-    <div class="notes">
-      <ion-card>
-        <ion-card-header>
-            <ion-card-title>Notes</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ul>
+          </ul> -->
+
+
+
+<!--
+           <ul>
             <li class="ion-activatable _note" *ngFor="let item of note">
               <a
                 routerLink="{{item.id}}"
@@ -41,9 +51,4 @@
               </a>
               <ion-ripple-effect></ion-ripple-effect>
             </li>
-          </ul>
-        </ion-card-content>
-      </ion-card>
-    </div>
-  </section>
-</div>
+          </ul> -->

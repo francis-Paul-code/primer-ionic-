@@ -24,13 +24,11 @@ export class HomePage implements OnInit {
   getTasks() {
     this.taskService.getTask().subscribe((item) => {
       this.tasks = item.tasks.slice(Math.max(item.tasks.length - 3, 0));
-      console.log(this.tasks);
     });
   }
   geNotes() {
     this.notesService.getNote().subscribe((item) => {
       this.note = item.notes.slice(Math.max(item.notes.length - 3, 0));
-      console.log(this.note);
     });
   }
 }

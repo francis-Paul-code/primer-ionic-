@@ -1,0 +1,12 @@
+{
+	"appId": "com.primer.ion",
+	"appName": "primer",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"server": {
+		"allowNavigation": []
+	},
+	"android": {
+		"allowMixedContent": true
+	}
+}

@@ -1,5 +1,7 @@
 {
   "name": "primer",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
